@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
@@ -11,24 +11,52 @@ function App() {
           </button>
         </div>
 
-        <label className="mortgage__label">Mortgage Amount</label>
-        <input className="mortgage__input" type="number" />
-        <label className="mortgage__label">Mortgage Term</label>
-        <input className="mortgage__input" type="number" />
-        <label className="mortgage__label">Interest Rate</label>
-        <input className="mortgage__input" type="number" />
+        <div className="mortgage__input-group">
+          <label className="mortgage__label" htmlFor="amount">
+            Mortgage Amount
+          </label>
+          <div className="mortgage__input-wrapper">
+            <span className="mortgage__icon mortgage__icon--left">£</span>
+            <input className="mortgage__input" type="number" id="amount" />
+          </div>
+        </div>
+
+        <div className="mortgage__input-group">
+          <label className="mortgage__label" htmlFor="term">
+            Mortgage Term
+          </label>
+          <div className="mortgage__input-wrapper">
+            <input className="mortgage__input" type="number" id="term" />
+            <span className="mortgage__icon mortgage__icon--right">years</span>
+          </div>
+        </div>
+
+        <div className="mortgage__input-group">
+          <label className="mortgage__label" htmlFor="interest-rate">
+            Interest Rate
+          </label>
+          <div className="mortgage__input-wrapper">
+            <input className="mortgage__input" type="number" id="interest-rate"></input>
+            <span className="mortgage__icon mortgage__icon--right">%</span>
+          </div>
+        </div>
 
         <fieldset className="mortgage__type">
           <legend className="mortgage__label">Mortgage Type</legend>
 
-          <label className="mortgage__radio-label">Repayment</label>
-          <input className="mortgage__radio" type="radio" id="repayment" name="mortgage-type" value="repayment" />
+          <label className="mortgage__radio-label">
+            <input className="mortgage__radio" type="radio" name="mortgage-type" value="repayment" />
+            Repayment
+          </label>
 
-          <label className="mortgage__radio-label">Interest only</label>
-          <input className="mortgage__radio" type="radio" id="interest" name="mortgage-type" value="interest" />
+          <label className="mortgage__radio-label">
+            <input className="mortgage__radio" type="radio" name="mortgage-type" value="interest" />
+            Interest Only
+          </label>
         </fieldset>
 
         <button className="mortgage__submit-button" type="submit">
+          <img src="/assets/icon-calculator.svg" alt="Calculator icon"></img>
           Calculate Repayments
         </button>
       </form>
@@ -39,7 +67,7 @@ function App() {
           alt="Empty results illustration"
         ></img>
         <p className="mortgage__results-text">Results shown here</p>
-        <p className="mortgage__results-descrition">
+        <p className="mortgage__results-description">
           Complete the form and click “calculate repayments” to see what your monthly repayments would be.
         </p>
       </section>

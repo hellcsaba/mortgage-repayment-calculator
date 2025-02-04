@@ -1,0 +1,133 @@
+@use './index.scss' as index;
+
+.mortgage {
+    height: 100vh;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        padding: 2rem 1rem;
+        background-color: index.$white;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    &__reset-button {
+        all: unset;
+        text-decoration: underline;
+        display: block;
+    }
+
+    &__input-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        font-weight: 500;
+        color: index.$slate-700;
+        padding-block-end: 0.5rem;
+    }
+    
+    &__input-wrapper {
+        display: flex;
+        border-radius: 0.5rem;
+        border: 1px solid index.$slate-500;
+        align-items: center;
+    }
+
+    &__input {
+        border: none;
+        outline: none;
+        background: transparent;
+        padding: 1rem;
+        width: 100%;
+        margin-inline-start: auto;
+    }
+
+    &__icon {
+        background-color: index.$slate-100;
+        padding: 0.75rem 1rem;
+        font-weight: 600;
+        color: index.$slate-500;
+        font-size: 1.125rem;
+
+        &--left {
+            border-radius: 0.48rem 0 0 0.48rem;
+        }
+
+        &--right {
+            border-radius: 0 0.48rem 0.48rem 0;
+        }
+    }
+
+    &__type {
+        all: unset;
+    }
+
+    &__radio-label {
+        font-size: 1.1rem;
+        font-weight: 700;
+        display: block;
+        border: 1px solid index.$slate-500;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-block-end: 0.5rem;
+    }
+
+    &__radio {
+        transform: scale(1.5);
+        margin-inline: 0.5rem 1rem;
+    }
+
+    &__submit-button {
+        all: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0.75rem;
+        font-weight: 700;
+        font-size: 1.125rem;
+        background-color: index.$lime;
+        padding: 1rem;
+        border-radius: 2rem;
+    }
+
+    &__results {
+        background-color: index.$slate-900;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: index.$white;
+        padding: 2rem;
+        row-gap: 1rem;
+    }
+
+    &__results-image {
+        display: block;
+        height: 100%;
+        width: auto;
+    }
+
+    &__results-text {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    &__results-description {
+        color: index.$slate-500;
+        text-align: center;
+    }
+
+}
