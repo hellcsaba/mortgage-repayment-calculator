@@ -26,6 +26,12 @@
         all: unset;
         text-decoration: underline;
         display: block;
+        color: index.$slate-500;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: index.$slate-900;
+        }
     }
 
     &__input-group {
@@ -44,6 +50,11 @@
         border-radius: 0.3125rem;
         border: 1px solid index.$slate-500;
         align-items: center;
+        transition: border 0.3s ease;
+
+        &:hover {
+            border: 1px solid index.$slate-900;
+        }
     }
 
     &__input {
@@ -83,11 +94,24 @@
         padding: 0.75rem;
         border-radius: 0.3125rem;
         margin-block-end: 0.5rem;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            border-color: index.$lime;
+            box-shadow: 0 0 0.1rem index.$lime;
+        }
+
+        &:active {
+            border-color: index.$lime;
+            background-color: index.$lime-opacity-30;
+        }
     }
 
     &__radio {
         transform: scale(1.5);
         margin-inline: 0.5rem 1rem;
+        accent-color: index.$lime;
+        border: none;
     }
 
     &__submit-button {
@@ -101,6 +125,11 @@
         background-color: index.$lime;
         padding: 1rem;
         border-radius: 2rem;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: index.$lime-opacity-60;
+        }
     }
 
     &__results {
@@ -175,4 +204,17 @@
         }
     }
 
+}
+
+// remove the increase, decrease buttons for type number input fields
+// For Chrome, Safari, Edge, Opera 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+// For Firefox 
+input[type="number"] {
+  -moz-appearance: textfield;
 }
