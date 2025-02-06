@@ -41,7 +41,7 @@
     
     &__input-wrapper {
         display: flex;
-        border-radius: 0.5rem;
+        border-radius: 0.3125rem;
         border: 1px solid index.$slate-500;
         align-items: center;
     }
@@ -63,11 +63,11 @@
         font-size: 1.125rem;
 
         &--left {
-            border-radius: 0.48rem 0 0 0.48rem;
+            border-radius: 0.31rem 0 0 0.31rem;
         }
 
         &--right {
-            border-radius: 0 0.48rem 0.48rem 0;
+            border-radius: 0 0.31rem 0.31rem 0;
         }
     }
 
@@ -80,8 +80,8 @@
         font-weight: 700;
         display: block;
         border: 1px solid index.$slate-500;
-        padding: 1rem;
-        border-radius: 0.5rem;
+        padding: 0.75rem;
+        border-radius: 0.3125rem;
         margin-block-end: 0.5rem;
     }
 
@@ -128,6 +128,51 @@
     &__results-description {
         color: index.$slate-500;
         text-align: center;
+    }
+
+}
+
+@media (min-width: 50rem) {
+    .mortgage {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 64rem;
+        height: auto;
+        background-color: index.$white;
+        border-radius: 1rem;
+
+        &__form {
+            padding: 2rem;
+        border-radius: 1rem;
+
+        }
+
+        &__header {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__row {
+
+            display: flex;
+            flex-direction: row;
+            column-gap: 1.5rem;
+        }
+
+        &__submit-button {
+            align-self: flex-start;
+            padding: 1rem 2rem;
+        }
+
+        &__results {
+            border-radius: 0 1rem 1rem 6rem;
+        }
+
+        &__results-image {
+            display: block;
+            height: auto;
+            width: auto;
+        }
     }
 
 }

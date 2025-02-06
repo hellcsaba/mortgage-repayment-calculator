@@ -21,23 +21,25 @@ function App() {
           </div>
         </div>
 
-        <div className="mortgage__input-group">
-          <label className="mortgage__label" htmlFor="term">
-            Mortgage Term
-          </label>
-          <div className="mortgage__input-wrapper">
-            <input className="mortgage__input" type="number" id="term" />
-            <span className="mortgage__icon mortgage__icon--right">years</span>
+        <div className="mortgage__row">
+          <div className="mortgage__input-group">
+            <label className="mortgage__label" htmlFor="term">
+              Mortgage Term
+            </label>
+            <div className="mortgage__input-wrapper">
+              <input className="mortgage__input" type="number" id="term" />
+              <span className="mortgage__icon mortgage__icon--right">years</span>
+            </div>
           </div>
-        </div>
 
-        <div className="mortgage__input-group">
-          <label className="mortgage__label" htmlFor="interest-rate">
-            Interest Rate
-          </label>
-          <div className="mortgage__input-wrapper">
-            <input className="mortgage__input" type="number" id="interest-rate"></input>
-            <span className="mortgage__icon mortgage__icon--right">%</span>
+          <div className="mortgage__input-group">
+            <label className="mortgage__label" htmlFor="interest-rate">
+              Interest Rate
+            </label>
+            <div className="mortgage__input-wrapper">
+              <input className="mortgage__input" type="number" id="interest-rate"></input>
+              <span className="mortgage__icon mortgage__icon--right">%</span>
+            </div>
           </div>
         </div>
 

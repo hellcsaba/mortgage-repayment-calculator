@@ -22,4 +22,12 @@ $slate-900: hsl(202, 55%, 16%);
 :root {
   font-family: 'Red Hat Text', 'sans-serif';
   color: $slate-900;
+  background-color: $slate-100;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
