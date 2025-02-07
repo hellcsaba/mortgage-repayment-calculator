@@ -34,6 +34,12 @@
         }
     }
 
+    &__row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+
     &__input-group {
         display: flex;
         flex-direction: column;
@@ -50,10 +56,19 @@
         border-radius: 0.3125rem;
         border: 1px solid index.$slate-500;
         align-items: center;
-        transition: border 0.3s ease;
+        transition: border-color 0.3s ease, color 0.3s ease;
 
         &:hover {
-            border: 1px solid index.$slate-900;
+            border-color: index.$slate-900;
+        }
+
+        &:focus-within {
+            border-color: index.$lime;
+        }
+
+        &:focus-within .mortgage__icon {
+            background-color: index.$lime;
+            color: index.$slate-900;
         }
     }
 
@@ -72,6 +87,7 @@
         font-weight: 600;
         color: index.$slate-500;
         font-size: 1.125rem;
+        transition: background-color 0.3s ease;
 
         &--left {
             border-radius: 0.31rem 0 0 0.31rem;
@@ -110,8 +126,6 @@
     &__radio {
         transform: scale(1.5);
         margin-inline: 0.5rem 1rem;
-        accent-color: index.$lime;
-        border: none;
     }
 
     &__submit-button {
@@ -172,8 +186,7 @@
 
         &__form {
             padding: 2rem;
-        border-radius: 1rem;
-
+            border-radius: 1rem;
         }
 
         &__header {
@@ -182,7 +195,6 @@
         }
 
         &__row {
-
             display: flex;
             flex-direction: row;
             column-gap: 1.5rem;
@@ -217,4 +229,31 @@ input[type="number"]::-webkit-outer-spin-button {
 // For Firefox 
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+input[type='radio'] {
+    -webkit-appearance: none;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    outline: none;
+    border: 0.0625rem solid gray;
+}
+
+input[type='radio']:before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked:before {
+    background: index.$lime;
+    
+}
+
+input[type="radio"]:checked {
+  border-color: index.$lime;
 }
