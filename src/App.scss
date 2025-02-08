@@ -70,6 +70,10 @@
             background-color: index.$lime;
             color: index.$slate-900;
         }
+
+        &--error {
+            border-color: index.$red;
+        }
     }
 
     &__input {
@@ -95,6 +99,11 @@
 
         &--right {
             border-radius: 0 0.31rem 0.31rem 0;
+        }
+
+        &--error {
+            background-color: index.$red;
+            color: index.$white;
         }
     }
 
@@ -173,7 +182,7 @@
         text-align: center;
     }
 
-    &__error {
+    &__error-message {
         color: index.$red;
         font-size: 0.875rem;
         padding-block-start: 0.5rem;

@@ -45,8 +45,10 @@ function App() {
           <label className="mortgage__label" htmlFor="amount">
             Mortgage Amount
           </label>
-          <div className="mortgage__input-wrapper">
-            <span className="mortgage__icon mortgage__icon--left">£</span>
+          <div className={`mortgage__input-wrapper ${errors.amount ? "mortgage__input-wrapper--error" : ""}`}>
+            <span className={`mortgage__icon mortgage__icon--left ${errors.amount ? "mortgage__icon--error" : ""}`}>
+              £
+            </span>
             <input
               className="mortgage__input"
               type="number"
@@ -55,7 +57,7 @@ function App() {
               onChange={(e) => setAmount(e.target.value === "" ? "" : Number(e.target.value))}
             />
           </div>
-          {errors.amount && <p className="mortgage__error">{errors.amount}</p>}
+          {errors.amount && <p className="mortgage__error-message">{errors.amount}</p>}
         </div>
 
         <div className="mortgage__row">
@@ -63,7 +65,7 @@ function App() {
             <label className="mortgage__label" htmlFor="term">
               Mortgage Term
             </label>
-            <div className="mortgage__input-wrapper">
+            <div className={`mortgage__input-wrapper ${errors.term ? "mortgage__input-wrapper--error" : ""}`}>
               <input
                 className="mortgage__input"
                 type="number"
@@ -71,16 +73,18 @@ function App() {
                 value={term}
                 onChange={(e) => setTerm(e.target.value === "" ? "" : Number(e.target.value))}
               />
-              <span className="mortgage__icon mortgage__icon--right">years</span>
+              <span className={`mortgage__icon mortgage__icon--right ${errors.amount ? "mortgage__icon--error" : ""}`}>
+                years
+              </span>
             </div>
-            {errors.term && <p className="mortgage__error">{errors.term}</p>}
+            {errors.term && <p className="mortgage__error-message">{errors.term}</p>}
           </div>
 
           <div className="mortgage__input-group">
             <label className="mortgage__label" htmlFor="interest-rate">
               Interest Rate
             </label>
-            <div className="mortgage__input-wrapper">
+            <div className={`mortgage__input-wrapper ${errors.interestRate ? "mortgage__input-wrapper--error" : ""}`}>
               <input
                 className="mortgage__input"
                 type="number"
@@ -88,9 +92,11 @@ function App() {
                 value={interestRate}
                 onChange={(e) => setInterestRate(e.target.value === "" ? "" : Number(e.target.value))}
               ></input>
-              <span className="mortgage__icon mortgage__icon--right">%</span>
+              <span className={`mortgage__icon mortgage__icon--right ${errors.amount ? "mortgage__icon--error" : ""}`}>
+                %
+              </span>
             </div>
-            {errors.interestRate && <p className="mortgage__error">{errors.interestRate}</p>}
+            {errors.interestRate && <p className="mortgage__error-message">{errors.interestRate}</p>}
           </div>
         </div>
 
@@ -120,7 +126,7 @@ function App() {
             />
             Interest Only
           </label>
-          {errors.mortgageType && <p className="mortgage__error">{errors.mortgageType}</p>}
+          {errors.mortgageType && <p className="mortgage__error-message">{errors.mortgageType}</p>}
         </fieldset>
 
         <button className="mortgage__submit-button" type="submit">
