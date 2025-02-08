@@ -173,6 +173,13 @@
         text-align: center;
     }
 
+    &__error {
+        color: index.$red;
+        font-size: 0.875rem;
+        padding-block-start: 0.5rem;
+        font-weight: 500;
+    }
+
 }
 
 @media (min-width: 50rem) {
