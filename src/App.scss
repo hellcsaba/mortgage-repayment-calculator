@@ -80,7 +80,9 @@
         border: none;
         outline: none;
         background: transparent;
-        padding: 1rem;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.75rem;
         width: 100%;
         margin-inline-start: auto;
     }
@@ -155,7 +157,7 @@
         }
     }
 
-    &__results {
+    &__results-empty {
         background-color: index.$slate-900;
         display: flex;
         flex-direction: column;
@@ -172,12 +174,12 @@
         width: auto;
     }
 
-    &__results-text {
+    &__results-empty-text {
         font-size: 1.5rem;
         font-weight: 600;
     }
 
-    &__results-description {
+    &__results-empty-description {
         color: index.$slate-500;
         text-align: center;
     }
@@ -187,6 +189,62 @@
         font-size: 0.875rem;
         padding-block-start: 0.5rem;
         font-weight: 500;
+    }
+
+    &__results {
+        background-color: index.$slate-900;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        color: index.$white;
+        padding: 2rem;
+        row-gap: 1rem;
+    }
+
+    &__results-text {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    &__results-description {
+        color: index.$slate-500;
+        padding-block-end: 0.5rem;
+    }
+
+    &__results-calculation {
+        background-color: index.$slate-1000;
+        width: 100%;
+        border-radius: 0.5rem;
+        padding: 1.5rem 1rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__banner {
+        position: absolute;
+        height: 0.25rem;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 0.5rem;
+        background: index.$lime;
+    }
+
+    &__results-monthly-repayment {
+        color: index.$lime;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    &__results-break {
+        border: 1px solid index.$slate-500;
+        margin-block: 1.5rem;
+    }
+
+    &__results-total-repayment {
+        font-weight: 700;
+        font-size: 1.5rem;
     }
 
 }
@@ -219,6 +277,10 @@
         &__submit-button {
             align-self: flex-start;
             padding: 1rem 2rem;
+        }
+
+        &__results-empty {
+            border-radius: 0 1rem 1rem 6rem;
         }
 
         &__results {
