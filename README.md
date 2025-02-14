@@ -26,7 +26,17 @@ Users should be able to:
 
 ### Screenshot
 
-![]()
+#### Desktop
+
+![](./design/desktop-design-solution.png)
+
+![](./design/desktop-design-empty-solution.png)
+
+#### Mobile
+
+![](./design/mobile-design-solution.png)
+
+![](./design/mobile-design-empty-solution.png)
 
 - Solution URL: [Code](https://github.com/hellcsaba/mortgage-repayment-calculator)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
