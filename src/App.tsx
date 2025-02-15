@@ -180,7 +180,7 @@ function App() {
         </fieldset>
 
         <button className="mortgage__submit-button" type="submit">
-          <img src="/assets/icon-calculator.svg" alt="Calculator icon"></img>
+          <img src={`${import.meta.env.BASE_URL}assets/icon-calculator.svg`} alt="Calculator icon"></img>
           Calculate Repayments
         </button>
       </form>
@@ -188,7 +188,7 @@ function App() {
         <section className="mortgage__results-empty">
           <img
             className="mortgage__results-image"
-            src="/assets/illustration-empty.svg"
+            src={`${import.meta.env.BASE_URL}assets/illustration-empty.svg`}
             alt="Empty results illustration"
           ></img>
           <p className="mortgage__results-empty-text">Results shown here</p>
